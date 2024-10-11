@@ -89,7 +89,7 @@ class VinylController extends AbstractController
 ```
 # Les Routes vers les gabarits Twig :
 
-    Comme on peut le constater à partir des snippets du code, 3 routes ont été configurées ; "/crates/" pour l'accès à la liste des inventaires, représentée par le fichier twig index.html.twig (avec un peu de CSS :)), vraie galère ), "/crates/{id}" pour l'accès à un inventaire spécifique (fichier twig sous templates/RecordCrate/show.html.twig), et la route "/vinyl/{id}" pour afficher un vinyl individuel, qui appartient à un certain "Crate" (fichier sous templates/Vinyl/index.html.twig).
+ - Comme on peut le constater à partir des snippets du code, 3 routes ont été configurées ; "/crates/" pour l'accès à la liste des inventaires, représentée par le fichier twig index.html.twig (avec un peu de CSS :)), vraie galère ), "/crates/{id}" pour l'accès à un inventaire spécifique (fichier twig sous templates/RecordCrate/show.html.twig), et la route "/vinyl/{id}" pour afficher un vinyl individuel, qui appartient à un certain "Crate" (fichier sous templates/Vinyl/index.html.twig).
 
 
           
