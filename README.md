@@ -102,8 +102,10 @@ class VinylController extends AbstractController
 
 # Installation (Github) :
     
+```bash
    git clone https://github.com/NABILYousseff/symfony-collection.git
    cd symfony-collection
    symfony composer install
    symfony console doctrine:database:create
    symfony console doctrine:load:fixtures -n 
+```
