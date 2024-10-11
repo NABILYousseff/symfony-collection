@@ -151,6 +151,6 @@ Projet/
 
 ```bash
     unzip NABILYoussef-1e_renduCSC4101.zip
-    cd NABILYoussef-1e_renduCSC4101
+    cd rendu-CSC4101
     symfony composer install
 ```
