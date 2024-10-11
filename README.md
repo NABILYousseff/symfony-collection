@@ -1,35 +1,43 @@
-# Collection des Vinyls
+# Nom et Prénom :
+
+- Nabil Youssef
+
+
+# Thème : Collections des Vinyls
 
 - Ce projet est autour des collections des albums de musique (vinyls), l'idée c'est que chaque utilisateur (owners) aura un inventaire de vinyls nommé RecordCrate, aucune exigence pour le genre des vinyls par Crate , ils peuvent être diversifiés mais pour le moment le fichier des Fixtures aura une classification par genre puisqu'on n'a pas encore créer des utilisateurs (je voulais juste organiser les inventaires selon un principe, ce N'EST PAS EXIGÉ PAR LE CODE). 
 
 
-# Installation 
+# Initialisation :
 
-
-# Description du projet (Initialisation)
-
+- Création du répértoire du projet 
 
 - Création du Projet Symfony sous le nom myvinyls
 
-
+```bash
+    mkdir $HOME/CSC4101/projet/
+    cd $HOME/CSC4101/projet/
+    symfony --debug new myvinyls --version=lts --webapp
+    
+```
 - Création des entités RecordCrate (inventaire) et Vinyl (objet)
 
 # Différents attributs de chaque classe :
   - Vinyl :
-     id (int)
-     title (String)
-     artist (String)
-     releaseYear (Date)
-     Label (String)
-     musicGenre (String)
-     tracklist (JSON)
-     coverArt (String) : URL of the cover image ? ( indisponibles pour le moment)
-     RecordCrate (Many-To-One relation with the RecordCrate Class)
+    - id (int)
+    - title (String)
+    - artist (String)
+    - releaseYear (Date)
+    - Label (String)
+    - musicGenre (String)
+    - tracklist (JSON)
+    - coverArt (String) : URL of the cover image ? ( indisponibles pour le moment)
+    - RecordCrate (Many-To-One relation with the RecordCrate Class)
 
   - RecordCrate :
-     crateId (int)
-     description (Sring)
-     Vinyls (One-To-Many relation wih vinyl)
+    - crateId (int)
+    - description (Sring)
+    - Vinyls (One-To-Many relation wih vinyl)
 
 # Données chargées :
 
@@ -89,7 +97,7 @@ class VinylController extends AbstractController
 ```
 # Les Routes vers les gabarits Twig :
 
- - Comme on peut le constater à partir des snippets du code, 3 routes ont été configurées ; "/crates/" pour l'accès à la liste des inventaires, représentée par le fichier twig index.html.twig (avec un peu de CSS :)), vraie galère ), "/crates/{id}" pour l'accès à un inventaire spécifique (fichier twig sous templates/RecordCrate/show.html.twig), et la route "/vinyl/{id}" pour afficher un vinyl individuel, qui appartient à un certain "Crate" (fichier sous templates/Vinyl/index.html.twig).
+ - Comme on peut le constater à partir des snippets du code, 3 routes ont été configurées ; "/crates/" pour l'accès à la liste des inventaires, représentée par le fichier twig sous "templates/record_crate/index.html.twig" (avec un peu de CSS :)), vraie galère ), "/crates/{id}" pour l'accès à un inventaire spécifique (fichier twig sous templates/record_crate/show.html.twig), et la route "/vinyl/{id}" pour afficher un vinyl individuel, qui appartient à un certain "Crate" (fichier sous templates/Vinyl/index.html.twig).
 
 
           
@@ -99,6 +107,36 @@ class VinylController extends AbstractController
 
 - J'ai aussi introduit du CSS dans le fichier dont le chemin est : "/public/css/style.css" (pour ne pas compliquer les choses), que j'appelle en utilisant la fonction Twig "asset" dans le "templates/base.html.twig" duquel héritent les autres pages fichiers Twig.
 
+# Arborescence (presque) de mon projet :
+
+```
+Projet/
+│
+├── public/
+│   └── css/
+│       └── style.css
+│
+├── src/
+│   ├── Controller/
+│   │   ├── RecordCrateController.php
+│   │   └── VinylController.php
+│   ├── Entity/
+│   │   ├── RecordCrate.php
+│   │   └── Vinyl.php
+│   └── Repository/
+│       ├── RecordCrateRepository.php
+│       └── VinylRepository.php
+│
+├── templates/
+│   ├── base.html.twig
+│   ├── record_crate/
+│   │   ├── show.html.twig
+│   │   └── index.html.twig  
+│   ├── vinyl/
+│   │   ├── index.html.twig
+│
+└── README.md
+```
 
 # Installation (Github) :
     
