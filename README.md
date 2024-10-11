@@ -20,12 +20,18 @@
      releaseYear (Date)
      Label (String)
      musicGenre (String)
-     tracklist (String Array)
+     tracklist (JSON)
+     coverArt (String) : URL of the cover image ?
 
   - RecordCrate :
      crateId (int)
-     digger (String : owner of the crate, One-To-One relation with  CrateDiggers)  
-     Vinyls (Many-To-Many relation wih vinyl)
+     description (Sring)
+     owner (String : owner of the crate, One-To-One relation with  CrateDiggers)  
+     Vinyls (One-To-Many relation wih vinyl)
 
-     
+  - CrateDigger :
+     id (int)
+     Name (String)
+     email (String)
+       
 

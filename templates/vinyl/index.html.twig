@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ vinyl.Title }} {% endblock %}
+
+{% block body %}
+<h1> Vinyl Photos for later ! </h1>
+<br></br>
+<table>
+	<tbody>
+		<tr>
+			<th>Id</th>
+			<td> {{ vinyl.id }} </td>
+		</tr>
+		
+		<tr>
+			<th>Title</th>
+			<td> {{ vinyl.title }} </td>
+		</tr>
+				
+		
+		 <tr>
+			<th>Artist</th>
+			<td> {{ vinyl.artist }} </td>
+		</tr>
+				
+		
+		<tr>
+			<th>Release Year</th>
+			<td> {{ vinyl.releaseyear }} </td>
+		</tr>
+				
+		
+		<tr>
+			<th>Label</th>
+			<td> {{ vinyl.label }} </td>
+		</tr>
+				
+		<tr>		
+			<th>Genre</th>
+			<td> {{ vinyl.musicgenre }} </td>
+		</tr>
+		
+		<tr>	
+			<th>Tracklist</th>
+			<td><ul>	
+				{% for track in vinyl.tracklist %}
+					<li> {{ track.track_number }} . {{ track.track_name }} ( {{ track.duration }} ) </li>
+				{% endfor %}
+			</ul></td>
+			
+		</tr>
+		
+		</tbody>
+</table>
+
+<a href = "{{ path('recrate_show', {'id' : vinyl.recordcrate.id}) }}">Go back to the crate</a>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Crate n°{{ crate.id }}{% endblock %}
+
+{% block body %}
+	<h1> A Crate </h1>
+		{% dump crate %}
+	<table class = "table">
+		<tbody>
+			<tr>
+				<th>Id</th>
+				<td>{{ crate.id }}</td>
+			</tr>
+			<tr>
+				<th>Description</th>
+				<td>{{ crate.description }}</td>
+			</tr>
+			<tr>
+				<th>Vinyl Records available</th>
+				<td><ul>
+				{% for vinyl in crate.vinyls %}
+				<li><a href="{{ path('vinyl_show', {'id': vinyl.id}) }}">{{ vinyl }}</li>
+				{% endfor %} {# vinyls #}
+				</ul></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<a href="{{ path('home') }}">back to the list </a>
+	<br></br>
+	
+	
+	
+{% endblock %} {# body #}

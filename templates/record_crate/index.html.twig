@@ -1,0 +1,19 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %} Record Crates List {% endblock %}
+
+{% block body %}
+    <h1>Record Crates</h1>
+    <h3>There are only three crates for testing purposes:</h3>
+
+    <div class="crate-container">
+        {% for crate in crates %}
+            <div class="crate-card">
+                <h3>Crate {{ crate.id }}</h3>
+                <p>{{ crate.description }}</p>
+                <a class="crate-btn" href="{{ path('recrate_show', {'id': crate.id}) }}">Dig into this crate</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
