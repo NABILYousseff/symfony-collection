@@ -41,6 +41,7 @@ Ce projet est autour des collections des albums de musique (vinyls), l'idée c'e
     
 Le premier contrôleur contient 2 méthodes : indexAction et showAction. RecordCrateController::method indexAction pour l'affichage de la liste des inventaires (crates), et RecordCrateController::method showAction pour l'affichage des détails et du contenu d'un seul inventaire specifique.
 
+```php
 #[Route('/crates')]
 class RecordCrateController extends AbstractController
 {
@@ -69,9 +70,10 @@ class RecordCrateController extends AbstractController
             
       }
 }
-
+```
 Le 2ème contrôleur contient une seule méthode VinylController::method showAction pour l'affichage des détails d'un seul vinyl.
 
+```php
 class VinylController extends AbstractController
 {
     //Welcome page
@@ -84,7 +86,7 @@ class VinylController extends AbstractController
     }
     
 }
-
+```
 # Les Routes vers les gabarits Twig :
 
     Comme on peut le constater à partir des snippets du code, 3 routes ont été configurées ; "/crates/" pour l'accès à la liste des inventaires, représentée par le fichier twig index.html.twig (avec un peu de CSS :)), vraie galère ), "/crates/{id}" pour l'accès à un inventaire spécifique (fichier twig sous templates/RecordCrate/show.html.twig), et la route "/vinyl/{id}" pour afficher un vinyl individuel, qui appartient à un certain "Crate" (fichier sous templates/Vinyl/index.html.twig).
