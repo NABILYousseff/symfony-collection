@@ -100,5 +100,10 @@ class VinylController extends AbstractController
 - J'ai aussi introduit du CSS dans le fichier dont le chemin est : "/public/css/style.css" (pour ne pas compliquer les choses), que j'appelle en utilisant la fonction Twig "asset" dans le "templates/base.html.twig" duquel héritent les autres pages fichiers Twig.
 
 
-
-
+# Installation (Github) :
+    
+   git clone https://github.com/NABILYousseff/symfony-collection.git
+   cd symfony-collection
+   symfony composer install
+   symfony console doctrine:database:create
+   symfony console doctrine:load:fixtures -n 
