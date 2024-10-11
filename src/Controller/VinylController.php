@@ -8,7 +8,9 @@ use Symfony\Component\Routing\Attribute\Route;
 use App\Entity\Vinyl;
 class VinylController extends AbstractController
 {
-    //Welcome page
+    /*
+     * Affichage d'un vinyl individuel
+     */
     #[Route('/vinyl/{id}', name: 'vinyl_show',requirements: ['id' => '\d+'], methods : ['GET'])]
     public function showAction(Vinyl $vinyl) : Response
     {

@@ -1,6 +1,6 @@
 # Collection des Vinyls
 
-Ce projet est autour des collections des albums de musique (vinyls), l'idée c'est que chaque utilisateur (owners) aura un inventaire de vinyls nommé RecordCrate, aucune exigence pour le genre des vinyls par Crate , ils peuvent être diversifiés mais pour le moment le fichier des Fixtures aura une classification par genre puisqu'on n'a pas encore créer des utilisateurs (je voulais juste organiser les inventaires selon un principe, ce N'EST PAS EXIGÉ PAR LE CODE). 
+- Ce projet est autour des collections des albums de musique (vinyls), l'idée c'est que chaque utilisateur (owners) aura un inventaire de vinyls nommé RecordCrate, aucune exigence pour le genre des vinyls par Crate , ils peuvent être diversifiés mais pour le moment le fichier des Fixtures aura une classification par genre puisqu'on n'a pas encore créer des utilisateurs (je voulais juste organiser les inventaires selon un principe, ce N'EST PAS EXIGÉ PAR LE CODE). 
 
 
 # Installation 
@@ -33,7 +33,7 @@ Ce projet est autour des collections des albums de musique (vinyls), l'idée c'e
 
 # Données chargées :
 
-    Pour le moment j'ai créé 3 inventaires, chaque inventaire contient 3 vinyls, et chaque "record" contient 3 morceaux avec leurs informations (numéro du track, titre et durée) 
+  -  Pour le moment j'ai créé 3 inventaires, chaque inventaire contient 3 vinyls, et chaque "record" contient 3 morceaux avec leurs informations (numéro du track, titre et durée) 
     
 # Controllers :
     
@@ -71,7 +71,7 @@ class RecordCrateController extends AbstractController
       }
 }
 ```
-Le 2ème contrôleur contient une seule méthode VinylController::method showAction pour l'affichage des détails d'un seul vinyl.
+- Le 2ème contrôleur contient une seule méthode VinylController::method showAction pour l'affichage des détails d'un seul vinyl.
 
 ```php
 class VinylController extends AbstractController
