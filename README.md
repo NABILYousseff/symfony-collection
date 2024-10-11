@@ -147,3 +147,10 @@ Projet/
    symfony console doctrine:database:create
    symfony console doctrine:load:fixtures -n 
 ```
+# Installation (zip) :
+
+```bash
+    unzip NABILYoussef-1e_renduCSC4101.zip
+    cd NABILYoussef-1e_renduCSC4101
+    symfony composer install
+```
